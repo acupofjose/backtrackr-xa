@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BacktrackrXA.Views.SettingsPage" Title="Settings">
+    <ContentPage.Content>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Server Info">
+                    <EntryCell x:Name="ServerHost" Label="Host" Placeholder="acupofjose.org" Keyboard="Url"></EntryCell>
+                    <EntryCell x:Name="ServerPort" Label="Port" Placeholder="9000" Keyboard="Numeric"></EntryCell>
+                    <SwitchCell x:Name="ServerUseWebsockets" Text="Use Websockets?"></SwitchCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

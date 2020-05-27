@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:controls="clr-namespace:BacktrackrXA.Controls"
+    xmlns:fontawesome="clr-namespace:FontAwesome"
+    mc:Ignorable="d"
+    x:Class="BacktrackrXA.Views.MapPage">
+    <AbsoluteLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+        <map:Map x:Name="Map" IsShowingUser="True" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        <AbsoluteLayout AbsoluteLayout.LayoutBounds="1,0.90,64,200" AbsoluteLayout.LayoutFlags="PositionProportional">
+            <StackLayout>
+                <Frame Padding="0" HasShadow="False">
+                    <Button
+                        x:Name="LocationButton"
+                        FontFamily="{StaticResource FontAwesomeRegular}"
+                        Text="{x:Static fontawesome:FontAwesomeIcons.LocationArrow}"
+                        FontSize="20"
+                        Margin="0"
+                        Padding="10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        Clicked="LocationButton_Clicked"
+                    />
+                </Frame>
+                <Frame Padding="0" HasShadow="False">
+                    <Button
+                        x:Name="ZoomInButton"
+                        FontFamily="{StaticResource FontAwesomeRegular}"
+                        Text="{x:Static fontawesome:FontAwesomeIcons.Plus}"
+                        FontSize="20"
+                        Margin="0"
+                        Padding="10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        Clicked="ZoomInButton_Clicked"
+                    />
+                </Frame>
+                <Frame Padding="0" HasShadow="False">
+                    <Button
+                        x:Name="ZoomOutButton"
+                        FontFamily="{StaticResource FontAwesomeRegular}"
+                        Text="{x:Static fontawesome:FontAwesomeIcons.Minus}"
+                        FontSize="20"
+                        Margin="0"
+                        Padding="10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        Clicked="ZoomOutButton_Clicked"
+                    />
+                </Frame>
+                <Frame Padding="0" HasShadow="False">
+                    <Button
+                        x:Name="LayerButton"
+                        FontFamily="{StaticResource FontAwesomeRegular}"
+                        Text="{x:Static fontawesome:FontAwesomeIcons.LayerGroup}"
+                        FontSize="20"
+                        Margin="0"
+                        Padding="10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                        Clicked="LayerButton_Clicked"
+                    />
+                </Frame>
+            </StackLayout>
+        </AbsoluteLayout>
+    </AbsoluteLayout>
+</ContentPage>
